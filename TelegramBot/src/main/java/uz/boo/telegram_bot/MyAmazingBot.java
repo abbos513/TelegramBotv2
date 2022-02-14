@@ -18,8 +18,17 @@ public class MyAmazingBot extends TelegramLongPollingBot {
     @Override
     public void onUpdateReceived(Update update) {
 
-        // We check if the update has a message and the message has text
-        if (update.hasMessage() && update.getMessage().hasText()) {
+        if (update.getMessage().getText().equals("/start")) {
+            try {
+                SendMessage sendMessage = new SendMessage();
+                sendMessage.setText(
+                        "Assalomu alaykum! Men sizga raqamli menyuni ko'rsataman. Iltimos, siz ko'rmoqchi bo'lgan ovqatlanish shahobchasi kodini kiriting");
+                sendMessage.setChatId(update.getMessage().getChatId().toString());
+                execute(sendMessage);
+            } catch (TelegramApiException e) {
+                e.printStackTrace();
+            }
+        } else if (update.hasMessage() && update.getMessage().hasText()) {
 
             long chat_id = update.getMessage().getChatId();
 
@@ -91,6 +100,6 @@ public class MyAmazingBot extends TelegramLongPollingBot {
     @Override
     public String getBotToken() {
         // Return bot token from BotFather
-        return "698390926:AAFm-hUFrbH_1sYOXvHCpaIoosOYfamKBmA";
+        return "5263284613:AAHpySlj8BliPMDy6KFBk8mDGcjE1ishxR8";
     }
 }
