@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-Main<TelegramBot>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "uz.boo.telegram_bot.Main",
+            "projectName": "TelegramBot",
+            "args": ""
+        }
+    ]
+}
