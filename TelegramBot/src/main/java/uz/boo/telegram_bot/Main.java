@@ -11,7 +11,7 @@ public class Main {
 	public static void main(String[] args) {
 		// Initialize Api Context
 		ApiContextInitializer.init();
-		SpringApplication.run(Main.class, args);
+		// SpringApplication.run(Main.class, args);
 
 		// Instantiate Telegram Bots API
 		TelegramBotsApi botsApi = new TelegramBotsApi();
